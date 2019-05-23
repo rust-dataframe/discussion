@@ -89,7 +89,7 @@ The `agnes` library currently has some ergonomics problems -- adding to and exte
 
 
 
-### Frames
+### [Frames](https://github.com/jesskfullwood/frames)
 
 **Status**: Semi-active (Last update Dec 2018)
 
@@ -104,7 +104,7 @@ SQL manipulations such as joins, group-by, and filtering are implemented. No Apa
 
 
 
-### Black-Jack
+### [Black-Jack](https://github.com/milesgranger/black-jack)
 
 **Status**: Active
 
