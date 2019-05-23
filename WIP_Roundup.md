@@ -65,7 +65,7 @@ A dataframe implementation built upon Apache Arrow.
 
 Column access is `String`-based, and not statically typed -- columns are stored and accessible as types that implement [Array](https://docs.rs/arrow/0.13.0/arrow/array/trait.Array.html).
 
-`rust-dataframe` supports CSV reading / writing, JSON reading, Feather reading, and PostgreSQL reading. It supports aggregations such as sum, max, min, and count, but does no support SQL manipulations such as join, or reshaping operations such as melt / pivot.
+`rust-dataframe` supports CSV reading / writing, JSON reading, Feather reading, and PostgreSQL reading. It does not support SQL manipulations such as join, or reshaping operations such as melt / pivot.
 
 
 
@@ -110,7 +110,7 @@ SQL manipulations such as joins, group-by, and filtering are implemented. No Apa
 
 `black-jack` is a dataframe library using the `Any` type for heterogeneous types.
 
-Columns in a `black-jack` dataframe can be heterogeneous and are accessed by `String`-based labels (for columns) or row indices for rows. It supports types `f64`, `i64`, `f32`, `i32`, and `String` (no arbitrary types). When accessing data, the type must be known by the user, and providing an incorrect type will result in a panic. Data from a column is accessible via iteration or indexing (via `Index` and `IndexMut`). Missing values are not supported.
+Columns in a `black-jack` dataframe can be heterogeneous and are accessed by `String`-based labels (for columns) or row indices for rows. It supports types `f64`, `i64`, `f32`, `i32`, and `String` (no arbitrary types). When accessing data, the type must be known by the user, and providing an incorrect type will return `None` (same as when providing an unrecognized column label). Alternatively, the dataframe can return an enum-based generic column container. Data from a column is accessible via iteration or indexing (via `Index` and `IndexMut`). Missing values are not supported.
 
 `black-jack` supports CSV reading / writing.
 
